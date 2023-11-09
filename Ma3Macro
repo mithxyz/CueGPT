@@ -8,7 +8,10 @@ The xml format should be as follows:
 <?xml version="1.0" encoding="UTF-8"?>
 <GMA3 DataVersion="1.9.0.0">
   <Macro Name="CueBuilder">
-    <MacroLine Command="cd root" Wait="0.01"/>.....
+    <MacroLine Command="cd root" Wait="0.01"/>
+    <MacroLine Command="Store Cue 1 CUEFADE=&quot;6&quot;"/>
+    <MacroLine Command="Label Cue 1 &quot;Slowly fade in on a centre stage spot&quot;"/>
+.....
 
   </Macro>
 </GMA3>

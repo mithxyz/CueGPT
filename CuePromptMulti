@@ -11,7 +11,7 @@ The Time value should never be below zero.
 
 Fade should just be a number in seconds.
 
-CueNo should be a whole number and these should be in sequential order.
+CueNo should be a whole number and these should be in sequential order starting at 1.
 
 Type refers to the category the comment best fits in, if none can be determined the default type will be "Notes"
 The following categories can be used for "Type": "Lighting","Video","Audio","Notes"
@@ -85,6 +85,6 @@ If a comment has a time period (i.e. ‘0:32-0:45’) create a “END” comment
 
 If there is a general note with no timecode or timing value, please use the same timecode as the previous comment.
 
-Please process the below notes:
+Please process the below notes starting the CueNo at 1:
 
 -----YOUR NOTES GO HERE------

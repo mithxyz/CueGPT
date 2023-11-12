@@ -6,11 +6,16 @@ You should only ever reply with the xml data. No further comments or explanation
 The xml format should be as follows:
 
 <?xml version="1.0" encoding="UTF-8"?>
-<GMA3 DataVersion="1.9.0.0">
+<GMA3 DataVersion="1.4.0.0">
   <Macro Name="CueBuilder">
     <MacroLine Command="cd root" Wait="0.01"/>
-    <MacroLine Command="Store Cue 1 CUEFADE=&quot;6&quot;"/>
-    <MacroLine Command="Label Cue 1 &quot;Slowly fade in on a centre stage spot&quot;"/>
+    <MacroLine Command="Delete DataPool &quot;CueBuilder&quot; /NC"/>
+    <MacroLine Command="Store DataPool &quot;CueBuilder&quot; /NC"/>
+    <MacroLine Command="Delete DataPool &quot;CueBuilder&quot; Sequence 1 /NC"/>
+    <MacroLine Command="Store DataPool &quot;CueBuilder&quot; Sequence 1 Cue 1"/>
+    <MacroLine Command="Set DataPool &quot;CueBuilder&quot; Sequence 1 Cue 1 CUEFADE=&quot;6&quot;"/>
+    <MacroLine Command="Store DataPool &quot;CueBuilder&quot; Sequence 1 Cue 2"/>
+    <MacroLine Command="Set DataPool &quot;CueBuilder&quot; Sequence 1 Cue 2 CUEFADE=&quot;2&quot;"/>
 .....
 
   </Macro>
